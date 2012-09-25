@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsrf-bf:BaseFault xmlns:wsrf-bf="http://docs.oasis-open.org/wsrf/bf-2"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:wsa="http://www.w3.org/2005/08/addressing"
+    xmlns:ebm="http://www.ebmwebsourcing.com/test/orginiator" 
+    xsi:schemaLocation="http://docs.oasis-open.org/wsrf/bf-2 ../../../src/main/resources/schema/bf-2.xsd ">
+  <wsrf-bf:Timestamp>2001-12-31T12:00:00</wsrf-bf:Timestamp>
+  <wsrf-bf:ErrorCode dialect="http://tempuri.org"/>
+  <wsrf-bf:Description xml:lang="eng">This is a virtual fault</wsrf-bf:Description>
+  <wsrf-bf:FaultCause/>
+</wsrf-bf:BaseFault>

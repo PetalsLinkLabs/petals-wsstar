@@ -1,0 +1,38 @@
+#################################################
+#				 	 	#
+#	OASIS "WS-RESOURCE" SPECIFICATION 	#
+#	IMPLEMENTATION : folders details	#
+#					  	#
+#################################################
+
+w3c "WS-RESOURCE" library is organised as follow:
+
+- "architecture/" directory :
+	This directory contains a BOUML(*) project which provides
+	architecture's concerns respect to "WS-RESOURCE" library implementation.
+
+- "documentation" directory :
+	This directory contains Latex source of related "WS-RESOURCE" library
+	implementation documentation
+	
+- "wsrf-r-datatype-api" directory :
+	This directory contains the "Datatype's api" part(**) of the "WS-RESOURCE"
+	library	implementation source code.  
+	
+- "wsrf-r-datatype-jaxbimpl" directory :
+ 	This directory contains the "Datatype's implementation" part(**), based
+        on "Jaxb2.x data binding" tool, of the "WS-RESOURCE" library implementation
+        source code.
+
+- "wsrf-r-services" directory :
+	This directory contains the "Services' concerns" part (services' interface,
+	faults, ...) of the "WS-RESOURCE" library implementation source code.
+
+
+(*) : BOUML is a open source free software that help you to design
+      your programs using UML langage. See "bouml.free.fr" for more details
+
+(**): "WS-RESOURCE" specification datatypes are implented follow the "Brigde
+	design pattern" - for the ws*factory class - as describe in the Gang of four's
+	book : "Design Patterns: Elements of Reusable Object-Oriented Software".
+	See web resource for more details (for exemple : http://en.wikipedia.org/wiki/Bridge_pattern)

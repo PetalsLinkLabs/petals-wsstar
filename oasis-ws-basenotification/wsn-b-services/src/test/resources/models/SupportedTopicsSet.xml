@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wstop:TopicSet xmlns:wstop="http://docs.oasis-open.org/wsn/t-1"
+	xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample"
+	xmlns:tns2="http://petals.ow2.org/topicNamespace/MyOtherTopicNamespaceSample"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <tns1:rootTopic1 wstop:topic="true">
+   		<tns1:childTopic1 wstop:topic="true"/>
+    	<tns1:childTopic2 wstop:topic="true"/>			
+   	</tns1:rootTopic1>
+   	<tns2:rootTopic2> 
+	   	<tns2:childTopic1>
+   			<tns2:childChildTopic1 wstop:topic="true">
+	   			<tns2:childChildChildTopic1 wstop:topic="true"/>
+   				<tns2:childChildChildTopic2 wstop:topic="true"/>
+	   		</tns2:childChildTopic1>
+	   	</tns2:childTopic1>	
+	   	<tns2:childTopic2 wstop:topic="true">
+	   		<tns2:childChildTopic1 wstop:topic="true"/>
+	   		<tns2:childChildTopic2 wstop:topic="true"/>
+	   	</tns2:childTopic2>
+   </tns2:rootTopic2>
+</wstop:TopicSet>

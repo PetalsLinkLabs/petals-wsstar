@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnitTests>
+	<!-- test concerning topicNamespace -->
+	<Test>		
+		<TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+			xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1://.[@wstop:topic='true']</TopicExpression>
+		<ResultExpected>true</ResultExpected>
+	</Test>
+	<Test>		
+		<TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+			xmlns:tns1="http://petals.ow2.org/topicNamespace/MyBadTopicNamespaceSample">tns1://.[@wstop:topic='true']</TopicExpression>
+		<ResultExpected>false</ResultExpected>
+	</Test>
+	<Test>
+	
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+    	 xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1://*[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>
+  <!-- "." as root Unsupported ! -->
+	<!--
+		<Test> <TopicExpression
+		Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+		xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">.</TopicExpression>
+		<ResultExpected>true</ResultExpected> </Test>
+	-->
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">*[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1/childTopic1[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:*/childTopic1[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1/badChildTopic[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>false</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:badRootTopic1/childTopic1[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>false</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1/childTopic2//*[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>false</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1/childTopic2//.[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/AReallyBadTopicNamespaceSample">tns1:rootTopic1/childTopic2//.[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>false</ResultExpected>
+  </Test>  
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyOtherTopicNamespaceSample">tns1:rootTopic2/*[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1/*/badChildChildTopic2[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>false</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1//*/badChildChildTopic2[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>false</ResultExpected>
+  </Test>
+  <Test>
+    <TopicExpression Dialect="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Full"
+      xmlns:tns="http://petals.ow2.org/topicNamespace/MyOtherTopicNamespaceSample">tns:rootTopic2/*/childChildTopic1[@wstop:topic='true']</TopicExpression>
+    <ResultExpected>true</ResultExpected>
+  </Test>	
+</UnitTests>

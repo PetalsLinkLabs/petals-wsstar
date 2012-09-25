@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wstop:TopicNamespace name="GENESIS_demonstrator_topics"
+targetNamespace="http://genesis-fp7.eu/5000/demonstration"
+xmlns:wstop="http://docs.oasis-open.org/wsn/t-1"
+xmlns:ebm="http://org.ow2.petals/ebmwebsourcing/specific/topicExtension"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://docs.oasis-open.org/wsn/t-1
+http://docs.oasis-open.org/wsn/t-1.xsd">
+    <wstop:Topic name="GENESIS"  ebm:supported="true">
+        <wstop:Topic name="Villerest"  ebm:supported="true">
+            <wstop:Topic name="Measurements"  ebm:supported="true">
+                <wstop:Topic name = "PH" messageTypes="sas:Alert"
+xmlns:sas="http://www.opengis.net/sas/0.9.0"  ebm:supported="true">
+                </wstop:Topic>
+            </wstop:Topic>
+            <wstop:Topic name="DerivedInformation"  ebm:supported="true">
+                <wstop:Topic name="CriticalPHVariation"
+messageTypes="eml:Event" xmlns:eml="http://www.opengis.net/eml/0.0.1"  ebm:supported="true">
+                </wstop:Topic>
+                <wstop:Topic name="CyanoBacteriaDetection"
+messageTypes="cap:alert" xmlns:cap="urn:oasis:names:tc:emergency:cap:1.1"  ebm:supported="true">
+                </wstop:Topic>
+            </wstop:Topic>
+        </wstop:Topic>
+    </wstop:Topic>
+</wstop:TopicNamespace>

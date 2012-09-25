@@ -1,0 +1,13 @@
+--
+
+    If the <catalog/> parameter isn't working, this link to schema A is
+
+    not recognized and the test will fail because of a missing schema.
+
+PUBLIC "http://www.w3.org/2005/08/addressing" "classpath:schema/wsaddressing10/wsaddressing10.xsd"
+PUBLIC "http://www.w3.org/XML/1998/namespace" "xml.xsd"
+--
+
+REWRITE_SYSTEM "http://www.w3.org/2005/08/addressing/ws-addr.xsd" "classpath:schema/wsaddressing10/wsaddressing10.xsd"
+
+REWRITE_SYSTEM "http://www.w3.org/2001/xml.xsd" "xml.xsd"

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+TODO : add a license (GPL, LGPL, COMMON Creative, ...) ?
+
+@Note : Redefine/extend "NotificationProducerRP" as a "complexType" that can be extended. 
+Xml Schema linked to "b-2.xsd"
+-->
+<xsd:schema targetNamespace="http://www.ebmwebsourcing.com/wsn/b-2-extension" 
+  xmlns:wsnb-ext="http://www.ebmwebsourcing.com/wsn/b-2-extension" 
+  xmlns:wsn-b="http://docs.oasis-open.org/wsn/b-2"
+  xmlns:wstop="http://docs.oasis-open.org/wsn/t-1"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+  
+  <!-- ======================== Imports  ============================ -->
+  
+  <xsd:import namespace="http://docs.oasis-open.org/wsn/b-2"
+              schemaLocation="http://docs.oasis-open.org/wsn/b-2.xsd" 
+  />
+  <xsd:import namespace="http://docs.oasis-open.org/wsn/t-1"
+              schemaLocation="http://docs.oasis-open.org/wsn/t-1.xsd" 
+  />
+  
+  <!-- =============== Resource Property Related  =================== -->
+  <!-- ======== Resource Properties for NotificationProducer : ======== -->
+  <!--                                                                  -->
+  <!-- ~~ Redefinition of the original type in order to allow         ~~ -->
+  <!-- ~~ usage of inheritance mechanism on WS-BrokeredNotification   ~~ -->
+  <!-- ~~ datatypes model implementation                              ~~ -->
+  
+  <xsd:complexType name="NotificationProducerRPCust">
+      <xsd:sequence>
+        <xsd:element ref="wsn-b:TopicExpression"        
+                     minOccurs="0" maxOccurs="unbounded" />
+        <xsd:element ref="wsn-b:FixedTopicSet"        
+                     minOccurs="0" maxOccurs="1" />
+        <xsd:element ref="wsn-b:TopicExpressionDialect"
+                     minOccurs="0" maxOccurs="unbounded" />
+        <xsd:element ref="wstop:TopicSet"
+                     minOccurs="0" maxOccurs="1" />
+      </xsd:sequence>
+  </xsd:complexType>  
+    
+</xsd:schema>

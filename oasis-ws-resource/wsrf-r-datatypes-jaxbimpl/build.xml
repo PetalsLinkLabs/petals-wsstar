@@ -1,0 +1,27 @@
+<project name="WsnJaxbFixbug" default="comment-annotation-and-codeline" basedir=".">
+    <description>
+        Fix Jaxb Java classes generation problem : @XmlAnyAttribute
+	can not appear in the parent and the inherited class	
+    </description>
+	<!-- set global properties for this build -->
+	<property name="gendir" location="target"/>
+
+	<target name="comment-annotation-and-codeline"
+		description="disable unexpected code lines with comment tags " >
+		
+		<replaceregexp byline="true">
+			<regexp pattern="(@XmlAnyAttribute)"/>
+			<substitution expression="//\1"/>
+			<fileset dir="${gendir}/generated-sources/xjc/com/ebmwebsourcing/wsstar/jaxb/resource">
+				<include name="resource/*FaultType.java"/>
+			</fileset>
+		</replaceregexp>
+		<replaceregexp byline="true">
+			<regexp pattern="(private Map)(.*)$"/>
+			<substitution expression="//\1\2"/>
+			<fileset dir="${gendir}/generated-sources/xjc/com/ebmwebsourcing/wsstar/jaxb/resource">
+				<include name="resource/*FaultType.java"/>
+			</fileset>
+		</replaceregexp>
+	</target> 	
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsn-br:RegisterPublisher 
+	xmlns:wsn-br="http://docs.oasis-open.org/wsn/br-2"  
+	xmlns:wsa="http://www.w3.org/2005/08/addressing"
+	targetnamespace ="http://docs.oasis-open.org/wsn/br-2">
+	<wsn-br:PublisherReference>
+		<wsa:Address>http://petals.ow2.org/petals-se-wsnProducer::NotificationProducerService@NotificationProducerEndpoint</wsa:Address>
+	</wsn-br:PublisherReference>
+	<wsn-br:Topic Dialect="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Full"
+	xmlns:tns1="http://petals.ow2.org/topicNamespace/MyOtherTopicNamespaceSample">tns1:rootTopic2/childTopic1/childChildTopic1[@wstop:topic='true']</wsn-br:Topic>
+	<wsn-br:Demand>true</wsn-br:Demand>
+	<wsn-br:InitialTerminationTime>2009-12-25T00:00:00.00000Z</wsn-br:InitialTerminationTime>
+</wsn-br:RegisterPublisher>

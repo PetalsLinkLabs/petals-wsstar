@@ -1,0 +1,12 @@
+<project name="WsnJaxbFixbug" default="change-attribute-visibility" basedir=".">
+    <description>
+        Fix Jaxb Java classes generation problem : @XmlAnyAttribute
+	can not appear in the parent and the inherited class	
+    </description>
+	<!-- set global properties for this build -->
+	<target name="change-attribute-visibility"
+		description="Change otherAttributes attribute visibility from private to protected" >
+		<replace file="target/generated-sources/xjc/com/ebmwebsourcing/wsstar/jaxb/resource/basefaults/BaseFaultType.java" 
+		                                    token="private Map" value="protected Map"/>     		
+	</target>	
+</project>

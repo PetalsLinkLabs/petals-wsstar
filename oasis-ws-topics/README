@@ -1,0 +1,34 @@
+#################################################
+#				 	 	#
+#	OEASIS "WS-TOPICS" SPECIFICATION 	#
+#	IMPLEMENTATION : folders details	#
+#					  	#
+#################################################
+
+w3c "WS-TOPICS" library is organised as follow:
+
+- "architecture/" directory :
+	This directory contains a BOUML(*) project which provides
+	architecture's concerns respect to "WS-TOPICS" library implementation.
+
+- "documentation" directory :
+	This directory contains Latex source of related "WS-TOPICS" library
+	implementation documentation
+	
+- "wstop-datatype-api" directory :
+	This directory contains the "Datatype's api" part(**) of the "WS-TOPICS"
+	library	implementation source code.  
+	
+- "wstop-datatype-jaxbimpl" directory :
+ 	This directory contains the "Datatype's implementation" part(**), based
+        on "Jaxb2.x data binding" tool, of the "WS-TOPICS" library implementation
+        source code.
+
+
+(*) : BOUML is a open source free software that help you to design
+      your programs using UML langage. See "bouml.free.fr" for more details
+
+(**): "WS-TOPICS" specification datatypes are implented follow the "Brigde
+	design pattern" - for the ws*factory class - as describe in the Gang of four's
+	book : "Design Patterns: Elements of Reusable Object-Oriented Software".
+	See web resource for more details (for exemple : http://en.wikipedia.org/wiki/Bridge_pattern)

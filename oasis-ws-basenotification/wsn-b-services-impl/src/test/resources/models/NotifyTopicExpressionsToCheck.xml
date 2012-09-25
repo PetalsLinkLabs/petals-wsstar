@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnitTests>
+	<Test>
+		<TopicExpression Dialect="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Concrete"
+			xmlns:tns1="http://petals.ow2.org/topicNamespace/MyOtherTopicNamespaceSample">tns1:rootTopic2/childTopic2/childChildTopic2[@wstop:topic='true']</TopicExpression>
+		<ResultExpected>true</ResultExpected>
+	</Test>	
+</UnitTests>

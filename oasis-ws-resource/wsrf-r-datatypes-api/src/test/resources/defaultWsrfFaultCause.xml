@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsrf-r:ResourceUnknownFault xmlns:wsrf-bf="http://docs.oasis-open.org/wsrf/bf-2"
+    xmlns:wsrf-r="http://docs.oasis-open.org/wsrf/r-2"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <wsrf-bf:Timestamp>2001-12-31T12:00:00</wsrf-bf:Timestamp>
+  <wsrf-bf:ErrorCode dialect="http://tempuri.org"/>
+  <wsrf-bf:Description xml:lang="en">This is a virtual fault</wsrf-bf:Description>
+</wsrf-r:ResourceUnknownFault>

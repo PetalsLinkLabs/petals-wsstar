@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnitTests>	
+  <Test>
+    <!-- <RegistrationId>12345678-1234-1234-abcd-123456789abc</RegistrationId>-->
+    <RegistrationId>00000000-1111-aaaa-ffff-010101afafaf</RegistrationId>
+  </Test>
+</UnitTests>

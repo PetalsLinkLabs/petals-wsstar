@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+	<properties>
+		<title>OASIS WS-Topics implementation Library : datatype api </title>
+		<author email="tdejean@petalslink.com">Thierry DÉJEAN</author>
+	</properties>
+	<body>
+		<release version="2.0" date="2011-03-03" description="...">
+			<action dev="tdejean=" type="update">
+				First release of the package
+			</action>
+		</release>
+	</body>
+</document>

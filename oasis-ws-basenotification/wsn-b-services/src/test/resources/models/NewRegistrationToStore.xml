@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnitTests>	
+  <Test>
+    <TopicExpression Dialect="http://www.w3.org/TR/1999/REC-xpath-19991116"
+      xmlns:tns1="http://petals.ow2.org/topicNamespace/MyFirstTopicNamespaceSample">tns1:rootTopic1/childTopic2//.[@wstop:topic='true']</TopicExpression>
+    <RegistrationId>00000000-1111-aaaa-ffff-010101afafaf</RegistrationId>
+  </Test>
+</UnitTests>

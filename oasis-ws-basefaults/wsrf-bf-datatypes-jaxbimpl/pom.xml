@@ -2,13 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>experimental-parent</artifactId>
-    <groupId>com.ebmwebsourcing.experimental.experimental-parents</groupId>
-    <version>1.0-SNAPSHOT</version>
-    <relativePath>../../../experimental-parents/experimental-parent/pom.xml</relativePath>
+  <groupId>org.ow2.petals</groupId>
+  <artifactId>petals-wsstar-parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
   </parent>
   <name>wsrf-bf-datatypes-jaxbimpl</name>
-  <groupId>com.ebmwebsourcing.deprecated.oasis-ws-basefaults</groupId>
+  <groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
   <artifactId>wsrf-bf-datatypes-jaxbimpl</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -20,14 +19,15 @@
     <!-- WS-* required dependencies -->
     <dependency>
       <artifactId>wsrf-bf-datatypes-api</artifactId>
-      <groupId>com.ebmwebsourcing.deprecated.oasis-ws-basefaults</groupId>
+      <groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <artifactId>wsaddressing10-impl</artifactId>
       <groupId>com.ebmwebsourcing.wsstar.wsaddressing</groupId>
-      <version>2.0-SNAPSHOT</version>
+      <version>v2012-02-13</version>
     </dependency>
+	<!--
     <dependency>
       <groupId>org.apache.neethi</groupId>
       <artifactId>neethi</artifactId>
@@ -38,8 +38,9 @@
         </exclusion>
       </exclusions>
     </dependency>
+	-->
     <dependency>
-      <groupId>com.ebmwebsourcing.deprecated.oasis-ws-basefaults</groupId>
+      <groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
       <artifactId>wsrf-bf-datatypes-api</artifactId>
       <version>1.0-SNAPSHOT</version>
       <type>test-jar</type>
@@ -68,14 +69,14 @@ ${basedir}/src/main/resources/schemas
             <episode>
               <artifactId>wsaddressing10-api</artifactId>
               <groupId>com.ebmwebsourcing.wsstar.wsaddressing</groupId>
-              <version>2.0-SNAPSHOT</version>
+              <version>v2012-02-13</version>
             </episode>
           </episodes>
           <plugins>
             <plugin>
               <artifactId>wsaddressing10-api</artifactId>
               <groupId>com.ebmwebsourcing.wsstar.wsaddressing</groupId>
-              <version>2.0-SNAPSHOT</version>
+              <version>v2012-02-13</version>
             </plugin>
           </plugins>
           <!--           <catalog>${basedir}/src/main/resources/schemas/catalog.cat</catalog> -->

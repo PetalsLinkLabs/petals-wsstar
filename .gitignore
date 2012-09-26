@@ -2,4 +2,5 @@ target/
 .classpath
 .project
 .settings
+oasis-ws-basenotification/wsn-b-services-impl/tmp_for_persistence/
 

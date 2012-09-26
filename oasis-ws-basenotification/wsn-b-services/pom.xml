@@ -39,4 +39,9 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+<scm>
+      <connection>scm:git:git://github.com/petalslinklabs/petals-wsstar.git</connection>
+      <developerConnection>scm:git:ssh://git@github.com/petalslinklabs/petals-wsstar.git</developerConnection>
+      <url>https://github.com/PetalsLinkLabs/petals-wsstar</url>
+  </scm>
 </project>

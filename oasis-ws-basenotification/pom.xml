@@ -10,7 +10,6 @@
   <name>wsstar-oasis-ws-basenotifiction-rootbuilder</name>
   <artifactId>wsstar-oasis-ws-basenotifiction-rootbuilder</artifactId>
   <groupId>org.ow2.petals.wsstar</groupId>
-  <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>wsn-b-datatypes-api</module>

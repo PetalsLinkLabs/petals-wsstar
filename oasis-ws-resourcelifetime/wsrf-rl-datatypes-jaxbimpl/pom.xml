@@ -11,7 +11,6 @@
 	<name>wsrf-rl-datatypes-jaxbimpl</name>
 	<groupId>org.ow2.petals.wsstar.oasis-ws-resourcelifetime</groupId>
 	<artifactId>wsrf-rl-datatypes-jaxbimpl</artifactId>
-	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
 		<topDirectoryLocation>..</topDirectoryLocation>
@@ -22,12 +21,12 @@
 		<dependency>
 			<artifactId>wsrf-rl-datatypes-api</artifactId>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-resourcelifetime</groupId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<artifactId>wsrf-bf-datatypes-jaxbimpl</artifactId>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<!-- Unit tests required dependencies -->
 		<dependency>
@@ -39,7 +38,7 @@
 		<dependency>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-resourcelifetime</groupId>
 			<artifactId>wsrf-rl-datatypes-api</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
@@ -60,14 +59,14 @@
 		<dependency>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
 			<artifactId>wsrf-bf-datatypes-api</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
 			<artifactId>wsrf-bf-datatypes-jaxbimpl</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
@@ -108,7 +107,7 @@
 						<episode>
 							<groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
 							<artifactId>wsrf-bf-datatypes-jaxbimpl</artifactId>
-							<version>1.0-SNAPSHOT</version>
+							<version>${project.version}</version>
 						</episode>
 					</episodes>
 					<plugins>
@@ -120,7 +119,7 @@
 						<plugin>
 							<groupId>org.ow2.petals.wsstar.oasis-ws-basefaults</groupId>
 							<artifactId>wsrf-bf-datatypes-jaxbimpl</artifactId>
-							<version>1.0-SNAPSHOT</version>
+							<version>${project.version}</version>
 						</plugin>
 					</plugins>
 					<!-- <catalog>${basedir}/src/main/resources/schemas/catalog.cat</catalog> -->

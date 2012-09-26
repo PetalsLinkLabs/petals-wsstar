@@ -11,7 +11,6 @@
 	<name>wsn-b-services-impl</name>
 	<artifactId>wsn-b-services-impl</artifactId>
 	<groupId>org.ow2.petals.wsstar.oasis-ws-basenotification</groupId>
-	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
 		<topDirectoryLocation>..</topDirectoryLocation>
@@ -22,27 +21,27 @@
 		<dependency>
 			<artifactId>wsn-b-services</artifactId>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-basenotification</groupId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-basenotification</groupId>
 			<artifactId>wsn-b-datatypes-jaxbimpl</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<artifactId>wsrf-r-datatypes-jaxbimpl</artifactId>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-resource</groupId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<artifactId>wsrf-rl-datatypes-jaxbimpl</artifactId>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-resourcelifetime</groupId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<artifactId>wsrf-rp-datatypes-jaxbimpl</artifactId>
 			<groupId>org.ow2.petals.wsstar.oasis-ws-resourceproperties</groupId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<!-- Unit tests required dependencies -->
 		<dependency>

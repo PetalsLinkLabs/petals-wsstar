@@ -10,7 +10,6 @@
   <name>wsstar-oasis-ws-resourceproperties-rootbuilder</name>
   <artifactId>wsstar-oasis-ws-resourceproperties-rootbuilder</artifactId>
   <groupId>org.ow2.petals.wsstar</groupId>
-  <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>wsrf-rp-datatypes-api</module>

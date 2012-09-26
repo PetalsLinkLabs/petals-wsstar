@@ -45,9 +45,55 @@
             </execution>
           </executions>
         </plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.0.2</version>
+			<configuration>
+				<source>1.5</source>
+				<target>1.5</target>
+				<showDeprecation>true</showDeprecation>
+				<showWarnings>
+					${java.compiler.showWarnings}
+				</showWarnings>
+				<fork>false</fork>
+				<debug>${java.compiler.debug}</debug>
+				<optimize>${java.compiler.optimize}</optimize>
+			</configuration>
+		</plugin>
 	</plugins>
     </pluginManagement>
   </build>
+  
+  <profiles>
+	<profile>
+		<id>development</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+			<java.compiler.showWarnings>
+				true
+			</java.compiler.showWarnings>
+			<java.compiler.debug>true</java.compiler.debug>
+			<java.compiler.optimize>false</java.compiler.optimize>
+		</properties>
+	</profile>
+	<profile>
+		<id>release</id>
+		<activation>
+			<activeByDefault>false</activeByDefault>
+		</activation>
+		<properties>
+			<java.compiler.showWarnings>
+				false
+			</java.compiler.showWarnings>
+			<java.compiler.debug>false</java.compiler.debug>
+			<java.compiler.optimize>true</java.compiler.optimize>
+		</properties>
+	</profile>
+  </profiles>
+  
   <repositories>
     <repository>
       <id>ebmws-public</id>

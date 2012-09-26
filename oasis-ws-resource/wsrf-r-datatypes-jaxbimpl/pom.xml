@@ -148,8 +148,8 @@
 		</plugins>
 	</build>
 <scm>
-      <connection>scm:git:git://github.com/petalslinklabs/petals-wsstar.git</connection>
-      <developerConnection>scm:git:ssh://git@github.com/petalslinklabs/petals-wsstar.git</developerConnection>
+      <connection>scm:git:git://github.com/PetalsLinkLabs/petals-wsstar.git</connection>
+      <developerConnection>scm:git:ssh://git@github.com/PetalsLinkLabs/petals-wsstar.git</developerConnection>
       <url>https://github.com/PetalsLinkLabs/petals-wsstar</url>
   </scm>
 </project>

@@ -58,7 +58,7 @@ public class TopicSetTypeImpl implements TopicSetType {
 			if (item instanceof Element){
 				currentRootTopic = (Element)item;
 				if (currentRootTopic != null && currentRootTopic.getNamespaceURI() != null && currentRootTopic.getNamespaceURI().equals(rootTopicToAddQName.getNamespaceURI()) &&
-						currentRootTopic.getLocalName().equals(currentRootTopic.getLocalName())){
+						currentRootTopic.getLocalName().equals(rootTopicToAddQName.getLocalPart())){
 					index = objFromModel.indexOf(item);
 					break;
 				}				

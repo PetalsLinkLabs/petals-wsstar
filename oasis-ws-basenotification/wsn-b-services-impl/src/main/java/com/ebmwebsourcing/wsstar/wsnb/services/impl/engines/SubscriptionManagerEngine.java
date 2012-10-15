@@ -603,7 +603,9 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 					// --- remove it from each resource's related topic list
 					// --- and tag the resource "to be removed" as soon as
 					// --- the list becomes empty
-					if (!(currentSubscriptionToUpdate.removeAssociatedTopicExpr(currentConcreteTopExpr)>0) &&
+					
+					// potentially null...
+					if (currentSubscriptionToUpdate != null && !(currentSubscriptionToUpdate.removeAssociatedTopicExpr(currentConcreteTopExpr)>0) &&
 							!uuids.contains(uuidItem)){
 						uuids.add(uuidItem);
 					}

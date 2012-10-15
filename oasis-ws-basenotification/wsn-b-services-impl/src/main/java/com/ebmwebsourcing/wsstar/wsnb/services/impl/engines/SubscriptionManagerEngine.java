@@ -639,6 +639,29 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 		subscription = null;
 
 	}	
+	
+	/**
+	 * Delete all the resources for a givent topic. This is a fix since
+	 * subscriptions are not removed when topics are updated...
+	 * CHA
+	 * 
+	 * @param topic to delete
+	 */
+	public void deleteAllForTopic(QName topic) {
+		// get all the subscriptions for the topic
+		List<String> ids = this.uuidsPerTopics.get(topic);
+
+		for (String subscriptionUuidItem : ids) {
+			try {
+				this.removeExpiredSubscription(subscriptionUuidItem);
+			} catch (WsnbException e) {
+				e.printStackTrace();
+			}
+		}
+
+		// delete the map entry
+		this.uuidsPerTopics.remove(topic);
+	}
 }
 
 

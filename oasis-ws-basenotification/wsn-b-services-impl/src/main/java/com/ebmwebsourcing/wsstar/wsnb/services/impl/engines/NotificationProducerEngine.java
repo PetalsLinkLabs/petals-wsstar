@@ -226,8 +226,8 @@ public class NotificationProducerEngine implements INotificationProducer,INotifi
 
 		GetCurrentMessageResponse response = null;
 		// TODO:
-		// 	1°/ get CurrentMessage uuid from TopicManager according to the given Topic expression
-		//	2°/ build the GetCurrentMessageResponse and return it
+		// 	1 get CurrentMessage uuid from TopicManager according to the given Topic expression
+		//	2 build the GetCurrentMessageResponse and return it
 
 		TopicExpressionType topic = request.getTopic();
 
@@ -271,14 +271,14 @@ public class NotificationProducerEngine implements INotificationProducer,INotifi
 	 */
 	public void setCurrentMessage(TopicExpressionType topic, NotificationMessageHolderType.Message notification, boolean isSameNotifyRequest) throws WsnbException, AbsWSStarFault {
 
-		// 1°/ ask topicManager if a previous currentMessage exists for this topic :
+		// 1/ ask topicManager if a previous currentMessage exists for this topic :
 		//	 getCurrentMessageUuid() from TopicManagerMgr and check if it is null or not
-		// 2°/ if currentMessageUuid is null then 
+		// 2/ if currentMessageUuid is null then 
 		//						- generate new one
 		//	   else 
 		//						- used the existing one
-		// 3°/ store(replace) the pair <uuid,Message> in hasMap
-		// 4°/ store/(replace) the currentMessageUuid in the topicManager's "supportedTopicSet base" 
+		// 3/ store(replace) the pair <uuid,Message> in hasMap
+		// 4/ store/(replace) the currentMessageUuid in the topicManager's "supportedTopicSet base" 
 
 		//		String currentMessageUuid = null;
 
@@ -524,7 +524,9 @@ public class NotificationProducerEngine implements INotificationProducer,INotifi
 
 						//  Check Stored currentMessage respect to new TopicSet.
 						//    => remove stored "currentMessage" which associated topic is no longer supported.
-						this.updateStoredCurrentMsgList(topicSetAsDOM);
+						
+						// HACK : Don't care about that. Need to check the old topic and new topic...
+						// this.updateStoredCurrentMsgList(topicSetAsDOM);
 
 						// --- Check current subscription respect to new TopicSet :
 						//  	=> "terminate" ones which associated topics is no longer supported.

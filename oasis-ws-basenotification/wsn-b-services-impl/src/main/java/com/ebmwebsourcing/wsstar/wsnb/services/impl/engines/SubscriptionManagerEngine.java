@@ -685,7 +685,14 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 			return result;
 		}
 		
-		List<String> uuids = uuidsPerTopics.get(topic);
+		// FIXME : really bad hack...
+		// create a new localpart from prefix
+		String localPart = topic.getLocalPart();
+		if (topic.getPrefix() != null) {
+			localPart = topic.getPrefix() + ":" + topic.getLocalPart();
+		}
+		QName t = new QName(topic.getNamespaceURI(), localPart);
+		List<String> uuids = uuidsPerTopics.get(t);
 		if (uuids != null) {
 			for (String id : uuids) {
 				WsnSubscription subscription = getSubscription(id);

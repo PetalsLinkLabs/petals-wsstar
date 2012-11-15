@@ -184,7 +184,7 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 	 * (non-Javadoc)
 	 * @see com.ebmwebsourcing.wsstar.wsnb.services.ISubscriptionManager#unsubscribe(com.ebmwebsourcing.wsstar.basenotification.datatypes.api.abstraction.Unsubscribe)
 	 */
-	public UnsubscribeResponse unsubscribe(Unsubscribe payload)
+	public synchronized UnsubscribeResponse unsubscribe(Unsubscribe payload)
 			throws WsnbException, AbsWSStarFault {
 		logger.log(Level.FINE, "performs a \"Unsubscribe\" request ...");
 
@@ -210,13 +210,13 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 					}
 				}
 			}
-
+			
 			if (this.targetSubscriptionResourceUuid == null || this.targetSubscriptionResourceUuid.equals("")){
 				this.throwSubscriptionUuidNotSetException("unsubscribe");
 			}
 
 			WsnSubscription wsnSubscription = null;
-
+			
 			// ---- perform a subscription destruction ---
 			if  (subscriptions.containsKey(this.targetSubscriptionResourceUuid)){
 				wsnSubscription = subscriptions.remove(this.targetSubscriptionResourceUuid);
@@ -250,7 +250,10 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 			wsnSubscription.destroy(RefinedWsrfrlFactory.getInstance().createDestroy());
 		} catch (WsrfrlException e) {
 			throw new WsnbException(e);
-		} 
+		}  finally {
+			// ---- /!\ IMPORTANT STEP : reset "targetSubscriptionResourceUuid" attribut's value
+			this.targetSubscriptionResourceUuid = "";
+		}
 		//		catch (ParserConfigurationException e) {
 		//			throw new WsnbException(e);
 		//		} catch (XmlObjectReadException e) {
@@ -263,7 +266,7 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 		// ---- build and return a default "UnsubscribeResponse" object		
 
 		return RefinedWsnbFactory.getInstance().createUnsubscribeResponse();
-	}
+	} 
 
 	/**
 	 * remove Subscription uuid from uuidsPerTopics map 

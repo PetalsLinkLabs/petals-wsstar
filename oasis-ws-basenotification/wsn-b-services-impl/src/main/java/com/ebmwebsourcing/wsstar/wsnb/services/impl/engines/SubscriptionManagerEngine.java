@@ -664,6 +664,38 @@ public class SubscriptionManagerEngine implements ISubscriptionManager {
 		// delete the map entry
 		this.uuidsPerTopics.remove(topic);
 	}
+	
+	/**
+	 * 
+	 * @param uuid
+	 * @return
+	 */
+	public WsnSubscription getSubscription(String uuid) {
+		return this.subscriptions.get(uuid);
+	}
+	
+	/**
+	 * 
+	 * @param topic
+	 * @return
+	 */
+	public List<WsnSubscription> getSubscriptions(QName topic) {
+		List<WsnSubscription> result = new ArrayList<WsnSubscription>();
+		if (topic == null) {
+			return result;
+		}
+		
+		List<String> uuids = uuidsPerTopics.get(topic);
+		if (uuids != null) {
+			for (String id : uuids) {
+				WsnSubscription subscription = getSubscription(id);
+				if (subscription != null) {
+					result.add(subscription);
+				}
+			}
+		}
+		return result;
+	}
 }
 
 
